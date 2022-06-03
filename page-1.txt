@@ -1,4 +1,6 @@
 my awesome novel
 
 
-my second line
+This line is really cool
+
+I'm adding a really nice third line
