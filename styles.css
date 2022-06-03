@@ -1,49 +1,116 @@
 
-body {
-    background-color: black;
-    /*color: black;*/
-}
-
-
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #343434;
-    padding: 5px;
-}
-
-
 .box {
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
     background-color: red;
-    width: calc(33.33% - 10px);
-    height: 150px;
-    margin: 5px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.box-2x{
-    width: calc(66.666% - 10px);
+.translate {
+    transition: transform 1s;
 }
 
-.yellow{
-    background-color: yellow;
+.translate:hover {
+    transform: translateX(100px) scale(1.5);
+
 }
 
-.green{
+.rotate {
+
+    animation-name: spin;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate (0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.relative {
+    position: relative;
+}
+
+.move {
+    position: absolute;
+
+    top: 0px;
+    left: 0px;
     background-color: green;
+
+    animation-name: move;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
-.red{
-    background-color:red;
+@keyframes move {
+    0% {
+        top: 0px;
+        left: 0px;
+        background-color: red;
+    }
+
+    25% {
+        top: 200px;
+        left: 0px;
+        background-color: orange;
+    }
+    
+    50% {
+        top: 200px;
+        left: 200px;
+        background-color: yellow;
+    }
+
+    75% {
+        top: 0px;
+        left: 200px;
+        background-color: orangered;
+    }
+
+    100% {
+        top: 0px;
+        left: 0px;
+        background-color: red;
+    }
 }
 
-.purple{
-    background-color: purple;
+.animate-in {
+    animation-name: animate-in;
+    animation-duration: 5s;
 }
 
-.blue{
-    background-color: blue;
+@keyframes animate-in {
+    from {
+        transform: translateX(-100px);
+    }
+    to {
+
+    }
+}
+
+.container {
+    width: 800px;
+    height: 300px;
+    background-color: red;
+    margin: auto;
+}
+
+@media only screen and (max-width: 850px) {
+    .container {
+        width: 500px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .container {
+        width: 300px;
+    }
 }
