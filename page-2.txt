@@ -2,4 +2,5 @@ this is the second chapter
 
 This is a paragraph
 
-I'm adding a third line
+I'm adding a third line 
+Cam rewrote line 5 to create a conflict
